@@ -1,0 +1,28 @@
+{
+  "nav": {
+    "home": "Home",
+    "explore": "Explore MP",
+    "features": "Smart Features",
+    "sustainability": "Sustainability",
+    "about": "About",
+    "planTrip": "Plan Your Trip"
+  },
+  "features": {
+    "aiItinerary": "AI-Powered Itinerary",
+    "interactiveMaps": "Interactive Maps",
+    "multilingual": "Multilingual Support",
+    "ecoFriendly": "Eco-Friendly Suggestions",
+    "mobileApp": "Mobile App (Future)",
+    "analytics": "Tourism Analytics"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "close": "Close"
+  }
+}
+
+
+

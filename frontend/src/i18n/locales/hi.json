@@ -1,0 +1,28 @@
+{
+  "nav": {
+    "home": "होम",
+    "explore": "एमपी एक्सप्लोर करें",
+    "features": "स्मार्ट फीचर्स",
+    "sustainability": "सस्टेनेबिलिटी",
+    "about": "के बारे में",
+    "planTrip": "अपनी यात्रा की योजना बनाएं"
+  },
+  "features": {
+    "aiItinerary": "AI-पावर्ड इटिनरेरी",
+    "interactiveMaps": "इंटरैक्टिव मैप्स",
+    "multilingual": "बहुभाषी सहायता",
+    "ecoFriendly": "पर्यावरण-अनुकूल सुझाव",
+    "mobileApp": "मोबाइल ऐप (भविष्य)",
+    "analytics": "पर्यटन एनालिटिक्स"
+  },
+  "common": {
+    "loading": "लोड हो रहा है...",
+    "error": "त्रुटि",
+    "submit": "सबमिट करें",
+    "cancel": "रद्द करें",
+    "close": "बंद करें"
+  }
+}
+
+
+

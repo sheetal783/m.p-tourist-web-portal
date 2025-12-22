@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base {
+  :root {
+    --background: 40 30% 98%;
+    --foreground: 150 25% 15%;
+
+    --card: 40 25% 96%;
+    --card-foreground: 150 25% 15%;
+
+    --popover: 40 30% 98%;
+    --popover-foreground: 150 25% 15%;
+
+    --primary: 150 35% 25%;
+    --primary-foreground: 40 30% 98%;
+
+    --secondary: 35 25% 88%;
+    --secondary-foreground: 150 25% 20%;
+
+    --muted: 150 15% 92%;
+    --muted-foreground: 150 15% 40%;
+
+    --accent: 42 85% 55%;
+    --accent-foreground: 150 35% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 150 15% 85%;
+    --input: 150 15% 85%;
+    --ring: 150 35% 25%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --forest: 150 40% 22%;
+    --forest-light: 150 30% 35%;
+    --sage: 150 20% 75%;
+    --earth: 35 35% 75%;
+    --amber: 42 85% 55%;
+    --cream: 40 35% 95%;
+    --terracotta: 15 50% 55%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(150 40% 22% / 0.9), hsl(150 35% 30% / 0.7));
+    --gradient-card: linear-gradient(180deg, hsl(40 30% 98%), hsl(40 25% 94%));
+    --gradient-accent: linear-gradient(135deg, hsl(42 85% 55%), hsl(35 80% 50%));
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(150 30% 20% / 0.1);
+    --shadow-card: 0 8px 30px -8px hsl(150 30% 20% / 0.12);
+    --shadow-elevated: 0 20px 50px -12px hsl(150 30% 20% / 0.2);
+  }
+
+  .dark {
+    --background: 150 25% 8%;
+    --foreground: 40 30% 95%;
+
+    --card: 150 20% 12%;
+    --card-foreground: 40 30% 95%;
+
+    --popover: 150 25% 8%;
+    --popover-foreground: 40 30% 95%;
+
+    --primary: 150 35% 45%;
+    --primary-foreground: 150 25% 8%;
+
+    --secondary: 150 20% 18%;
+    --secondary-foreground: 40 30% 90%;
+
+    --muted: 150 15% 20%;
+    --muted-foreground: 150 10% 60%;
+
+    --accent: 42 75% 50%;
+    --accent-foreground: 150 25% 8%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 150 15% 20%;
+    --input: 150 15% 20%;
+    --ring: 150 35% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-forest to-forest-light;
+  }
+
+  .card-hover {
+    @apply transition-all duration-500 hover:shadow-elevated hover:-translate-y-1;
+  }
+
+  .nav-link {
+    @apply relative text-foreground/80 hover:text-foreground transition-colors duration-300;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-accent scale-x-0 origin-right transition-transform duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply scale-x-100 origin-left;
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
+  }
+
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
